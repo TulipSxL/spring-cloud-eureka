@@ -54,12 +54,12 @@
 
 <#if isBelowRenewThresold>
     <#if !registry.selfPreservationModeEnabled>
-        <h4 id="uptime"><font size="+1" color="red"><b>RENEWALS ARE LESSER THAN THE THRESHOLD. THE SELF PRESERVATION MODE IS TURNED OFF.THIS MAY NOT PROTECT INSTANCE EXPIRY IN CASE OF NETWORK/OTHER PROBLEMS.</b></font></h4>
+        <h4 id="uptime"><font size="+1" color="red"><b>阈值小于预期且自我保护模式已关闭。当出现网络异常或其他问题时，可能无法保护您的实例。</b></font></h4>
     <#else>
-        <h4 id="uptime"><font size="+1" color="red"><b>EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY'RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE.</b></font></h4>
+        <h4 id="uptime"><font size="+1" color="red"><b>紧急！服务注册发现中心可能未正常下线实例。实例阈值小于预期，但为了安全没有下线实例</b></font></h4>
     </#if>
 <#elseif !registry.selfPreservationModeEnabled>
-    <h4 id="uptime"><font size="+1" color="red"><b>THE SELF PRESERVATION MODE IS TURNED OFF.THIS MAY NOT PROTECT INSTANCE EXPIRY IN CASE OF NETWORK/OTHER PROBLEMS.</b></font></h4>
+    <h4 id="uptime"><font size="+1" color="red"><b>自我保护模式已关闭。当出现网络异常或其他问题时，可能无法保护您的实例。</b></font></h4>
 </#if>
 
 <h1>DS 副本</h1>
